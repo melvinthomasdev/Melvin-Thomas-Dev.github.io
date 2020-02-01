@@ -4,7 +4,8 @@ from django.shortcuts import render
 
 from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
-from tutorial.quickstart.serializers import UserSerializer, GroupSerializer
+from .serializers import UserSerializer, GroupSerializer, BeaconSerializer
+from .models import Beacon
 
 
 class UserViewSet(viewsets.ModelViewSet):
@@ -21,3 +22,7 @@ class GroupViewSet(viewsets.ModelViewSet):
     """
     queryset = Group.objects.all()
     serializer_class = GroupSerializer
+
+class BeaconViewSet(viewsets.ModelViewSet):
+    queryset = Beacon.objects.all()
+    serializer_class = BeaconSerializer
