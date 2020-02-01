@@ -18,4 +18,4 @@ class GroupSerializer(serializers.HyperlinkedModelSerializer):
 class BeaconSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Beacon
-        fields=['name','uuid','major','minor']
+        fields=['name','uuid','major','minor','data']

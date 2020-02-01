@@ -15,4 +15,4 @@ class Beacon(models.Model):
     uuid=models.CharField(max_length=20,unique=True)
     major=models.IntegerField()
     minor=models.IntegerField()
-    data=KeyVal()
+    data=models.CharField(max_length=512,default='')
